@@ -16,16 +16,27 @@ export default {
 <style>
 #nav {
   padding-top: 30px;
-  margin-right: 30px;
-  margin-left: auto;
+  
 }
 #nav a {
   font-family: "Nexa";
-  font-size: 22px;
-  margin: 0 10px 10px 0;
+  font-size: 18px;
+  margin: 0 5px 5px 0;
   color: #e3e3e3;
 }
 #nav a:hover {
   text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  #nav {
+    margin-right: 30px;
+    margin-left: auto;
+  }
+
+  #nav a { 
+    font-size: 22px;
+    margin: 0 10px 10px 0;
+  }
 }
 </style>
