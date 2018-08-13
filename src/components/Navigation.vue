@@ -16,11 +16,10 @@ export default {
 <style>
 #nav {
   padding-top: 30px;
-  
 }
 #nav a {
   font-family: "Nexa";
-  font-size: 18px;
+  font-size: 15px;
   margin: 0 5px 5px 0;
   color: #e3e3e3;
 }
@@ -28,13 +27,13 @@ export default {
   text-decoration: none;
 }
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   #nav {
     margin-right: 30px;
     margin-left: auto;
   }
 
-  #nav a { 
+  #nav a {
     font-size: 22px;
     margin: 0 10px 10px 0;
   }
