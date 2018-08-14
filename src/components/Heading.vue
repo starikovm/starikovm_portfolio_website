@@ -31,18 +31,22 @@ export default {
 h3 {
   margin: 40px 0 0;
   font-size: 22px;
+  line-height: 30px;
 }
 p {
   font-size: 15px;
+  line-height: 30px;
 }
 
 @media only screen and (min-width: 600px) {
   h3 {
     margin: 40px 0 0;
     font-size: 38px;
+    line-height: 40px;
   }
   p {
     font-size: 22px;
+    line-height: 40px;
   }
 }
 </style>
