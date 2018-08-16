@@ -15,7 +15,7 @@ function canvasAnimate() {
 
   space.add({
     start: () => {
-      pts = Create.distributeRandom(space.innerBound, 500);
+      pts = Create.distributeRandom(space.innerBound, 1000);
     },
     animate: () => {
       let r =
