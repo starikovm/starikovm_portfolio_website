@@ -3,46 +3,72 @@
 </template>
 
 <script>
-import { CanvasSpace, Create, Circle } from "pts";
+import { Num, Group, Pt, Const, Line, CanvasSpace } from "pts";
 var space;
 function canvasAnimate() {
   space = new CanvasSpace("#homepageAnimation").setup({
-    bgcolor: "#1c6d80"
+    bgcolor: "#36364b"
   });
   var form = space.getForm();
-  var pts = [];
-  var colors = ["#ff2d5d", "#42dc8e", "#2e43eb", "#ffe359"];
+  (function() {
+    var pairs = [];
+    var leftDownCorner = new Pt(0, 0);
+    space.add({
+      start: () => {
+        let firstSide = space.size.maxValue().value;
+        let otherSide = space.size.minValue().value;
+        for (let i = 0; i < 100; i++) {
+          let ln = new Group(
+            new Pt(
+              Num.randomRange(
+                firstSide,
+                otherSide,
+                Num.randomRange(0, firstSide)
+              ),
+              -Num.randomRange(
+                firstSide,
+                otherSide,
+                Num.randomRange(0, firstSide)
+              )
+            ),
+            new Pt(
+              -Num.randomRange(
+                firstSide,
+                otherSide,
+                Num.randomRange(0, firstSide)
+              ),
+              Num.randomRange(
+                firstSide,
+                otherSide,
+                Num.randomRange(0, firstSide)
+              )
+            )
+          );
+          ln.moveBy(space.center).rotate2D(i * Math.PI / 50, space.center);
+          pairs.push(ln);
+        }
+      },
 
-  space.add({
-    start: () => {
-      pts = Create.distributeRandom(space.innerBound, 1000);
-    },
-    animate: () => {
-      let r =
-        Math.abs(space.pointer.x - space.center.x) / space.center.x * 150 + 70;
-      let range = Circle.fromCenter(space.pointer, r);
-
-      // check if each point is within circle's range
-      for (let i = 0, len = pts.length; i < len; i++) {
-        if (Circle.withinBound(range, pts[i])) {
-          // calculate circle size
-          let dist = (r - pts[i].$subtract(space.pointer).magnitude()) / r;
-          let p = pts[i]
-            .$subtract(space.pointer)
-            .scale(1 + dist)
-            .add(space.pointer);
-          form.fillOnly(colors[i % 4]).point(p, dist * 25, "circle");
-        } else {
-          form.fillOnly("#fff").point(pts[i], 0.5);
+      animate: () => {
+        for (let i = 0, len = pairs.length; i < len; i++) {
+          // rotate each line by 0.1 degree and check collinearity with pointer
+          let ln = pairs[i];
+          ln.rotate2D(Const.one_degree / 15, space.center);
+          let side = Line.sideOfPt2D(ln, leftDownCorner);
+          form
+            .stroke(side < 0 ? "rgba(255,255,0,.1)" : "rgba(0,255,0,.1)")
+            .line(ln);
         }
       }
-    }
-  });
-  if (space) {
-    space.bindMouse();
-    space.bindTouch();
-    space.play();
-  }
+    });
+
+    //// ----
+
+    space
+      .bindMouse()
+      .bindTouch()
+      .play();
+  })();
 }
 
 function restartCanvas() {
