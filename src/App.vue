@@ -19,7 +19,7 @@ export default {
 
 <style>
 html {
-  background-color: #1c6d80;
+  background-color: #36364b;
 }
 body {
   margin: 0;
