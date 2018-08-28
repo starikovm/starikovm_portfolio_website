@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { Num, Group, Pt, Const, Line, CanvasSpace } from "pts";
+import { Circle, Num, Group, Pt, Const, Line, CanvasSpace } from "pts";
 var space;
 function canvasAnimate() {
   space = new CanvasSpace("#homepageAnimation").setup({
@@ -50,9 +50,30 @@ function canvasAnimate() {
       },
 
       animate: () => {
+        // define a range from the pointer
+        let range = Circle.fromCenter(space.center, 200);
+        let middleRange = Circle.fromCenter(space.center, 400);
+        let outerRange = Circle.fromCenter(space.center, 600);
         for (let i = 0, len = pairs.length; i < len; i++) {
           // rotate each line by 0.1 degree and check collinearity with pointer
           let ln = pairs[i];
+
+          let inPath = Circle.intersectRay2D(range, ln);
+          let inPath2 = Circle.intersectRay2D(middleRange, ln);
+          let inPath3 = Circle.intersectRay2D(outerRange, ln);
+          if (inPath.length > 1) {
+            var intersectStrokeColor = "rgba(21,21,29,.1)";
+            form
+              .stroke(intersectStrokeColor)
+              .line(new Group(inPath[0], inPath[1]));
+            form
+              .stroke(intersectStrokeColor)
+              .line(new Group(inPath2[0], inPath2[1]));
+            form
+              .stroke(intersectStrokeColor)
+              .line(new Group(inPath3[0], inPath3[1]));
+          }
+
           ln.rotate2D(Const.one_degree / 15, space.center);
           let side = Line.sideOfPt2D(ln, leftDownCorner);
           form
