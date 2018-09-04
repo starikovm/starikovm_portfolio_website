@@ -69,7 +69,7 @@ function canvasAnimate() {
             .stroke(intersectStrokeColor)
             .line(new Group(inPath3[0], inPath3[1]));
         }
-        var rotatingDegree = Const.one_degree * 0.002 * i;
+        var rotatingDegree = Const.one_degree * 0.0005 * (i + 15);
         ln.rotate2D(rotatingDegree, space.center);
         let side = Line.sideOfPt2D(ln, leftDownCorner);
         form

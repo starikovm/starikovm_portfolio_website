@@ -2,7 +2,6 @@
   <div id="home">
     <HomepageAnimation/>  
     <div id="centeredContent">
-      <!-- <img alt="Mikhail Starikov" src="../assets/ava.png"> -->
       <Heading/>
     </div>
   </div>
