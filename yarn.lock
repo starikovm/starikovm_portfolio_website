@@ -5347,6 +5347,11 @@ psl@^1.1.24:
   version "1.1.29"
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.29.tgz#60f580d360170bb722a797cc704411e6da850c67"
 
+pts@^0.5.0:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/pts/-/pts-0.5.2.tgz#d621770c3788dc26f24fa185d0fbf536c1106c23"
+  integrity sha512-T6mryibup2vhEHLe3cF00e+RND6qPqCyc4X6jLrFVT7h8eKN4VYKPpuo/f/f6brPMvX3XkHDbwQFLST8JvsE/g==
+
 public-encrypt@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/public-encrypt/-/public-encrypt-4.0.2.tgz#46eb9107206bf73489f8b85b69d91334c6610994"
