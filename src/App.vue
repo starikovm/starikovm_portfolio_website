@@ -48,6 +48,8 @@ body {
 
 a {
   color: #e3e3e3;
+  text-decoration: underline;
+  cursor: pointer;
 }
 a:hover {
   text-decoration: none;

@@ -1,9 +1,9 @@
 <template>
     <div id="nav">
       <div id="nav-wrapper">
-        <router-link to="#about">About</router-link>
-        <router-link to="#projects">Projects</router-link>
-        <router-link to="#contact">Contact</router-link>
+        <a v-scroll-to="'#about'">About</a>
+        <a v-scroll-to="'#career'">Career</a>
+        <a v-scroll-to="'#contact'">Contact</a>
       </div>
     </div>
 </template>
