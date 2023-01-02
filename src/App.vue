@@ -2,19 +2,21 @@
   <div id="app">
     <div class="page-wrapper">
       <router-view/>
+      <Links/>
       <Navigation/>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Navigation from "@/components/Navigation.vue";
+import Links from "@/components/Links.vue";
 
 export default {
   name: "app",
   components: {
-    Navigation
+    Navigation,
+    Links
   }
 };
 </script>
@@ -45,7 +47,6 @@ body {
 .page-wrapper {
 }
 
-
 a {
   color: #e3e3e3;
   text-decoration: underline;
@@ -55,13 +56,17 @@ a:hover {
   text-decoration: none;
 }
 
-
 h1 {
   margin: 8px 0;
   font-size: 54px;
   line-height: 48px;
 }
-h2, h2 > span {
+
+h2 {
+  padding-bottom: 20px;
+}
+h2,
+h2 > span {
   margin: 8px 0;
   font-size: 44px;
   line-height: 38px;
@@ -71,7 +76,11 @@ h3 {
   font-size: 34px;
   line-height: 28px;
 }
-p, span, li, div, button {
+p,
+span,
+li,
+div,
+button {
   font-size: 20px;
   line-height: 30px;
 }

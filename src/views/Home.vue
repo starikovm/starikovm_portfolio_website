@@ -117,13 +117,13 @@ export default {
   name: "home",
   components: {
     Contact,
-    Heading,
+    Heading
   },
   data: () => ({
-    activeTab: 'leapsome'
+    activeTab: "leapsome"
   }),
   methods: {
-    setActiveTab: function (newActiveTab) {
+    setActiveTab: function(newActiveTab) {
       this.activeTab = newActiveTab;
     }
   }
@@ -147,13 +147,15 @@ export default {
 }
 .content {
   max-width: 900px;
-  padding: 50px 0;
-  margin: 0 50px;
+  padding: 70px 0;
+  margin: 0 100px;
   text-align: left;
 }
 .about-wrapper {
   display: flex;
-  flex-direction: row
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
 }
 .avatar {
   margin: 20px;
@@ -161,6 +163,18 @@ export default {
   width: 400px;
   height: 400px;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-wrapper {
+    flex-direction: column-reverse;
+  }
+  .avatar {
+    width: 90%;
+  }
+  .content {
+    padding: 100px 0;
+  }
 }
 .skills-list {
   display: grid;
@@ -191,13 +205,11 @@ export default {
 .tab-title {
   margin: 8px 0;
   font-size: 24px;
-  line-height: 18px;
+  line-height: 38px;
   font-weight: bold;
-  width:100%;
+  width: 100%;
 }
 .about-content {
-  width: 100%;
   padding-bottom: 200px;
 }
 </style>
-

@@ -26,17 +26,11 @@ export default {
 #nav-wrapper {
   border-radius: 20px;
   padding: 20px;
-  background-color: rgba(252, 245, 245, 0.15);
+  background-color: rgba(76, 76, 94, 0.9);
 }
 #nav-wrapper a {
   font-family: "Nexa";
-  font-size: 15px;
+  font-size: 22px;
   margin: 0 5px 5px 0;
-}
-
-@media only screen and (min-width: 600px) {
-  #nav a {
-    font-size: 22px;
-  }
 }
 </style>

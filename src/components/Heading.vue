@@ -26,6 +26,6 @@ export default {
   line-height: 30px;
 }
 .secondary-main-heading {
-  color: #8892b0
+  color: #8892b0;
 }
 </style>
