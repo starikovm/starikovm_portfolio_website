@@ -30,7 +30,6 @@ export default {
 }
 #nav-wrapper a {
   font-family: "Nexa";
-  font-size: 22px;
   margin: 0 5px 5px 0;
 }
 </style>

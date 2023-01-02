@@ -44,8 +44,6 @@ body {
   grid-template-rows: auto 1fr;
   min-height: 100vh;
 }
-.page-wrapper {
-}
 
 a {
   color: #e3e3e3;
@@ -80,8 +78,9 @@ p,
 span,
 li,
 div,
+a,
 button {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 30px;
 }
 
@@ -123,7 +122,7 @@ li::before {
   position: absolute;
   left: 0px;
   color: rgb(119, 255, 102);
-  font-size: 20px;
+  font-size: 22px;
   line-height: 30px;
 }
 button {
