@@ -14,6 +14,15 @@ import Links from "@/components/Links.vue";
 
 export default {
   name: "app",
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'en-US'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' }
+    ]
+  },
   components: {
     Navigation,
     Links
