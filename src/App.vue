@@ -153,6 +153,7 @@ button.active {
   justify-content: start;
   align-items: center;
   padding-bottom: 80px;
+  max-width: 100vw;
 }
 
 .fullscreen-content {

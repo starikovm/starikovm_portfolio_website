@@ -159,8 +159,8 @@ export default {
 .big-avatar {
   margin: 20px;
   border-radius: 5%;
-  width: 600px;
-  height: 600px;
+  max-width: 600px;
+  max-height: 600px;
   object-fit: cover;
 }
 
@@ -181,6 +181,7 @@ export default {
 }
 
 .whitepage {
+  max-width: 100vw;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -272,5 +273,42 @@ ul.expertise-list li:before {
 .rocket-emoji {
     font-size: 80px;
     padding: 120px 40px 0;
+}
+
+@media (max-width: 950px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .big-avatar {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+
+    p, div, li, a, span {
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 60px 50px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .content {
+        padding: 60px 10px;
+        margin: 0;
+    }
 }
 </style>
