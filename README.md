@@ -19,3 +19,5 @@ yarn run build
 ```
 yarn run lint
 ```
+
+copy index.html to 404.html for github pages deploy
