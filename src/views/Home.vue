@@ -1,5 +1,7 @@
 <template>
-  <div id="home">
+  <div>
+
+  <div class="page">
     <section class="content fullscreen-content">
       <Heading/>
     </section>
@@ -107,17 +109,24 @@
       <Contact/>
     </section>
   </div>
+    <Links/>
+    <Navigation/>
+  </div>
 </template>
 
 <script>
 import Heading from "@/components/Heading.vue";
 import Contact from "@/components/Contact.vue";
+import Navigation from "@/components/Navigation.vue";
+import Links from "@/components/Links.vue";
 
 export default {
   name: "home",
   components: {
     Contact,
-    Heading
+    Heading,
+    Navigation,
+    Links
   },
   data: () => ({
     activeTab: "leapsome"
@@ -131,51 +140,6 @@ export default {
 </script>
 
 <style>
-#home {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-}
-.fullscreen-content {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.content {
-  max-width: 900px;
-  padding: 70px 0;
-  margin: 0 100px;
-  text-align: left;
-}
-.about-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-}
-.avatar {
-  margin: 20px;
-  border-radius: 5%;
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-}
-
-@media only screen and (max-width: 600px) {
-  .about-wrapper {
-    flex-direction: column-reverse;
-  }
-  .avatar {
-    width: 90%;
-  }
-  .content {
-    padding: 100px 0;
-  }
-}
 .skills-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 260px));

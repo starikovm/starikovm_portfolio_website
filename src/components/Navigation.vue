@@ -2,8 +2,9 @@
     <div id="nav">
       <div id="nav-wrapper">
         <a v-scroll-to="'#about'">About</a>
-        <a v-scroll-to="'#career'">Career</a>
         <a v-scroll-to="'#contact'">Contact</a>
+        <a href="interview-consult">Consult</a>
+        <a v-scroll-to="'#career'">Career</a>
       </div>
     </div>
 </template>
