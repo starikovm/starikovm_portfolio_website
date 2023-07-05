@@ -5,7 +5,7 @@
         <div class="wrapper">
           <div class="consult-heading">
             <h1>I can help you succeed in your interview process</h1>
-            <h3>Using my experience of organising, leading and taking part in more than 100 software engineering interviews.</h3>
+            <h3>Using my experience of organising, leading and taking part in hundreds software engineering interviews.</h3>
           </div>
           <img class="big-avatar" alt="Mikhail Starikov" src="../assets/consult-ava.png">
         </div>
