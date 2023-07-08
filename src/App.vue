@@ -166,8 +166,8 @@ button.active {
 }
 .content {
   max-width: 1100px;
-  padding: 70px 0;
-  margin: 0 100px;
+  padding: 70px 90px;
+  margin: 0 10px;
   text-align: left;
 }
 .about-wrapper {

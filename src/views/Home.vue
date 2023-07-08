@@ -176,4 +176,16 @@ export default {
 .about-content {
   padding-bottom: 200px;
 }
+
+@media (max-width: 1280px) {
+    #links {
+        display: none;
+    }
+
+
+    .content {
+        padding: 60px 20px;
+        margin: 0;
+    }
+}
 </style>
